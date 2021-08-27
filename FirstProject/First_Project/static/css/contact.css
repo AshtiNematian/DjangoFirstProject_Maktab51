@@ -1,0 +1,24 @@
+body{
+     background-color: #81d4fa;
+}
+
+.contact{
+    padding: 5rem;
+    background-color: #205067;
+
+}
+.contact h1{
+    text-align: center;
+    background-color: white;
+}
+
+.contact ul{
+    padding: 10px 10px;
+   list-style: none;
+}
+
+.form{
+display: flex;
+
+
+}

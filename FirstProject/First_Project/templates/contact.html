@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+    contact
+{% endblock %}
+{% block styles %}
+        <link rel="stylesheet" href="{% static 'css/contact.html' %}" />
+{% endblock %}
+
+
+{% block main %}
+    <ul>
+        <li> Phone No : {{ contact_data.0.phone }}</li>
+        <li> Address : {{ contact_data.0.address }}</li>
+        <li> Email: {{ contact_data.0.email }}</li>
+        <li> Telegram: {{ contact_data.0.telegram }}</li>
+        <li> Whatsapp: {{ contact_data.0.whatsapp }}</li>
+
+    </ul>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Name<br>
+            <label for="n">
+                <input type="text" name="Name" size="30"  id="n">
+            </label ></p>
+        <p>Email<br>
+        <label for="e">
+            <input type="email" name="Email" size="30" id="e">
+        </label></p>
+
+        <p>Comments<br>
+            <label for="t">
+                <textarea cols="30" rows="5" name="Comment" id="t"></textarea>
+            </label></p>
+
+        <p><input type="submit" value="Submit"></p>
+
+    </form>
+
+{% endblock %}

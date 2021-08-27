@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+    contact
+{% endblock %}
+{% block styles %}
+        <link rel="stylesheet" href="{% static 'css/about.html' %}" />
+{% endblock %}
+
+{% block main %}
+    <h1>{{ about_data.0.title }}</h1>
+    <img src="{{about_data.0.image}}"/>
+    <p>{{ about_data.0.description }}</p>
+
+{% endblock %}
